@@ -1,4 +1,4 @@
-atmelstudio:
+avr-env:
   # image: atmelstudio
   build: .
   # Interactiv Mode (corresponds to -i)
