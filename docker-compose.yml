@@ -1,0 +1,16 @@
+atmelstudio:
+  # image: atmelstudio
+  build: .
+  # Interactiv Mode (corresponds to -i)
+  stdin_open: true
+  # corresponds to -t
+  tty: true
+  environment:
+    - "DISPLAY=$DISPLAY"
+    - "QT_X11_NO_MITSHM=1" 
+  volumes: 
+    - "/tmp/.X11-unix/X0:/tmp/.X11-unix/X0"
+    - ./:/home/nirnai/avr/project
+  devices:
+    - "/dev/ttyUSB0:/dev/ttyUSB0"
+  user: nirnai
